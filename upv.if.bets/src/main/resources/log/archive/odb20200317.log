@@ -1,0 +1,490 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:02:36 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 5596@DESKTOP-MVONMQ6
+
+[2020-03-17 17:02:36 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:02:36 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:02:36 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:07:49 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 14232@DESKTOP-MVONMQ6
+
+[2020-03-17 17:07:49 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:07:49 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:07:49 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:26:52 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 14588@DESKTOP-MVONMQ6
+
+[2020-03-17 17:26:52 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:26:52 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:26:52 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:31:43 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 4188@DESKTOP-MVONMQ6
+
+[2020-03-17 17:31:44 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:31:44 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:31:44 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:36:24 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 13088@DESKTOP-MVONMQ6
+
+[2020-03-17 17:36:24 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:36:24 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:36:24 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:38:13 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 13580@DESKTOP-MVONMQ6
+
+[2020-03-17 17:38:13 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:38:13 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:38:13 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 17:40:49 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 2508@DESKTOP-MVONMQ6
+
+[2020-03-17 17:40:49 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 17:40:49 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 17:40:49 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 17:41:04 #5 type.registry] 
+New type domain.Kuota
+
+[2020-03-17 17:41:04 #6 type] 
+Type domain.Kuota is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:02:24 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 2760@DESKTOP-MVONMQ6
+
+[2020-03-17 18:02:24 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:02:24 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:02:24 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:02:24 #5 type] 
+Type domain.Kuota is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:04:01 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 1204@DESKTOP-MVONMQ6
+
+[2020-03-17 18:04:01 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:04:01 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:04:01 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:04:01 #5 type] 
+Type domain.Kuota is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:19:12 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 1271-1271)
+
+[2020-03-17 18:19:12 #2 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 8612@DESKTOP-MVONMQ6
+
+[2020-03-17 18:19:12 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:19:12 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:19:12 #5 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:19:12 #6 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:19:12 #7 type.registry] 
+New type domain.Admins
+
+[2020-03-17 18:19:12 #8 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:20:46 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 1272-1272)
+
+[2020-03-17 18:20:46 #2 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 9504@DESKTOP-MVONMQ6
+
+[2020-03-17 18:20:46 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:20:46 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:20:47 #5 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:20:47 #6 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:20:47 #7 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:22:37 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 7500@DESKTOP-MVONMQ6
+
+[2020-03-17 18:22:38 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:22:38 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:22:38 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:22:38 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:22:38 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:24:30 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 9408@DESKTOP-MVONMQ6
+
+[2020-03-17 18:24:30 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:24:30 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:24:30 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:24:30 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:24:30 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:27:49 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 8508@DESKTOP-MVONMQ6
+
+[2020-03-17 18:27:49 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:27:49 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:27:49 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:27:49 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:27:49 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:30:01 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 11352@DESKTOP-MVONMQ6
+
+[2020-03-17 18:30:01 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:30:01 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:30:01 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:30:01 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:30:01 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:39:50 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 4840@DESKTOP-MVONMQ6
+
+[2020-03-17 18:39:50 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:39:50 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:39:50 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:39:50 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:39:50 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:44:57 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 11652@DESKTOP-MVONMQ6
+
+[2020-03-17 18:44:57 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:44:57 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:44:57 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:44:57 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:44:57 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:46:39 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 9820@DESKTOP-MVONMQ6
+
+[2020-03-17 18:46:39 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:46:39 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:46:39 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:46:39 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:46:39 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:48:41 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 9892@DESKTOP-MVONMQ6
+
+[2020-03-17 18:48:41 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:48:41 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:48:41 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:48:41 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:48:41 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:49:24 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 11720@DESKTOP-MVONMQ6
+
+[2020-03-17 18:49:25 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:49:25 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:49:25 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:49:25 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:49:25 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:50:43 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 8560@DESKTOP-MVONMQ6
+
+[2020-03-17 18:50:43 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:50:43 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:50:43 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:50:43 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:50:43 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:56:36 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 3348@DESKTOP-MVONMQ6
+
+[2020-03-17 18:56:36 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:56:36 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:56:36 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:56:36 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:56:36 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 18:58:13 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 13128@DESKTOP-MVONMQ6
+
+[2020-03-17 18:58:13 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 18:58:13 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 18:58:13 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 18:58:13 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 18:58:13 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 19:00:52 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 4064@DESKTOP-MVONMQ6
+
+[2020-03-17 19:00:52 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 19:00:52 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 19:00:52 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 19:00:52 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 19:00:52 #6 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 19:02:03 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 1281-1281)
+
+[2020-03-17 19:02:03 #2 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 13604@DESKTOP-MVONMQ6
+
+[2020-03-17 19:02:03 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 19:02:03 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 19:02:03 #5 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 19:02:03 #6 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 19:02:03 #7 type] 
+Type domain.Admins is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-17 19:02:32 #1 store] 
+Database 'C:\Users\julen\Desktop\SI workspace\upv.if.bets\src\main\resources\bets.temp' is opened by 2540@DESKTOP-MVONMQ6
+
+[2020-03-17 19:02:32 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-17 19:02:32 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-17 19:02:32 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-17 19:02:32 #5 type] 
+Type domain.Kuota is not enhanced.
+
+[2020-03-17 19:02:32 #6 type] 
+Type domain.Admins is not enhanced.
+

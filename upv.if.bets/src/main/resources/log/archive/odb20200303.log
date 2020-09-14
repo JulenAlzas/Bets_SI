@@ -1,0 +1,156 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:13:02 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 8788@DESKTOP-6GOVKO2
+
+[2020-03-03 19:13:02 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:13:02 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:13:02 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:39:35 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 5932@DESKTOP-6GOVKO2
+
+[2020-03-03 19:39:36 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:39:36 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:39:36 #4 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:42:01 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 19-19)
+
+[2020-03-03 19:42:01 #2 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 8204@DESKTOP-6GOVKO2
+
+[2020-03-03 19:42:01 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:42:01 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:42:01 #5 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:45:11 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 20-20)
+
+[2020-03-03 19:45:11 #2 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 3320@DESKTOP-6GOVKO2
+
+[2020-03-03 19:45:11 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:45:11 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:45:11 #5 type] 
+Type domain.User is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:46:41 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 21-21)
+
+[2020-03-03 19:46:41 #2 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 6396@DESKTOP-6GOVKO2
+
+[2020-03-03 19:46:41 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:46:41 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:46:41 #5 type] 
+Type domain.User is not enhanced.
+
+[2020-03-03 19:46:59 #6 type.registry] 
+New type domain.Bets
+
+[2020-03-03 19:46:59 #7 type] 
+Type domain.Bets is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:47:44 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' has been recovered (tr. 22-24)
+
+[2020-03-03 19:47:44 #2 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 4872@DESKTOP-6GOVKO2
+
+[2020-03-03 19:47:44 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:47:44 #4 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:47:44 #5 type] 
+Type domain.User is not enhanced.
+
+[2020-03-03 19:47:44 #6 type] 
+Type domain.Bets is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 19:53:25 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 7092@DESKTOP-6GOVKO2
+
+[2020-03-03 19:53:25 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 19:53:25 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 19:53:25 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-03 19:53:25 #5 type] 
+Type domain.Bets is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 20:03:01 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 2172@DESKTOP-6GOVKO2
+
+[2020-03-03 20:03:01 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 20:03:01 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 20:03:01 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-03 20:03:01 #5 type] 
+Type domain.Bets is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 20:04:11 #1 store] 
+Database 'C:\Users\Jokin\Desktop\upv.if.bets\src\main\resources\bets.temp' is opened by 9396@DESKTOP-6GOVKO2
+
+[2020-03-03 20:04:12 #2 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 20:04:12 #3 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 20:04:12 #4 type] 
+Type domain.User is not enhanced.
+
+[2020-03-03 20:04:12 #5 type] 
+Type domain.Bets is not enhanced.
+
