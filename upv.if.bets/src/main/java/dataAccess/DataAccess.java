@@ -39,6 +39,7 @@ import gui.MainGUI;
  * It implements the data access to the objectDb database
  */
 public class DataAccess  {
+	private static final String QUIÉN_GANARÁ_EL_PARTIDO = "¿Quién ganará el partido?";
 	protected static EntityManager  db;
 	protected static EntityManagerFactory emf;
 
@@ -128,11 +129,11 @@ public class DataAccess  {
 
 
 			if (Locale.getDefault().equals(new Locale("es"))) {
-				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
+				q1=ev1.addQuestion(QUIÉN_GANARÁ_EL_PARTIDO,1);
 				q2=ev1.addQuestion("¿Quién meterá el primer gol?",2);
-				q3=ev11.addQuestion("¿Quién ganará el partido?",1);
+				q3=ev11.addQuestion(QUIÉN_GANARÁ_EL_PARTIDO,1);
 				q4=ev11.addQuestion("¿Cuántos goles se marcarán?",2);
-				q5=ev17.addQuestion("¿Quién ganará el partido?",1);
+				q5=ev17.addQuestion(QUIÉN_GANARÁ_EL_PARTIDO,1);
 				q6=ev17.addQuestion("¿Habrá goles en la primera parte?",2);
 			}
 			else if (Locale.getDefault().equals(new Locale("en"))) {
