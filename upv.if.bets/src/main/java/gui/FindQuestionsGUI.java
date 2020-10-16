@@ -21,11 +21,13 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class FindQuestionsGUI extends JFrame {
+	private static final String EVENTS = "Events";
+
 	private static final long serialVersionUID = 1L;
 
 	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("EventDate"));
 	private final JLabel jLabelQueries = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Queries")); 
-	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Events")); 
+	private final JLabel jLabelEvents = new JLabel(ResourceBundle.getBundle("Etiquetas").getString(EVENTS)); 
 	private final JLabel jLabelKuotak = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("Kuotak")); 
 
 	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Ezeztatu"));
@@ -190,7 +192,7 @@ public class FindQuestionsGUI extends JFrame {
 
 						if (events.isEmpty() )
 							jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("NoEvents")+ ": "+dateformat1.format(calendarMio.getTime()));
-						else jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("Events")+ ": "+dateformat1.format(calendarMio.getTime()));
+						else jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString(EVENTS)+ ": "+dateformat1.format(calendarMio.getTime()));
 						for (domain.Event ev:events){
 							Vector<Object> row = new Vector<Object>();
 
@@ -640,7 +642,7 @@ public class FindQuestionsGUI extends JFrame {
 
 						if (events.isEmpty() )
 							jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("NoEvents")+ ": "+dateformat1.format(calendarMio.getTime()));
-						else jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("Events")+ ": "+dateformat1.format(calendarMio.getTime()));
+						else jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString(EVENTS)+ ": "+dateformat1.format(calendarMio.getTime()));
 						for (domain.Event ev:events){
 							Vector<Object> row = new Vector<Object>();
 
@@ -948,7 +950,7 @@ public class FindQuestionsGUI extends JFrame {
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("FindQuestionsTitle"));
 		jLabelEventDate.setText(ResourceBundle.getBundle("Etiquetas").getString("EventDate"));
 		jLabelQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("Queries")); 
-		jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString("Events")); 
+		jLabelEvents.setText(ResourceBundle.getBundle("Etiquetas").getString(EVENTS)); 
 		jLabelKuotak.setText(ResourceBundle.getBundle("Etiquetas").getString("Kuotak"));
 		lblZenbat.setText(ResourceBundle.getBundle("Etiquetas").getString("FindQuestionsGUI.lblZenbat.text"));
 		jButtonClose.setText(ResourceBundle.getBundle("Etiquetas").getString("Ezeztatu"));
