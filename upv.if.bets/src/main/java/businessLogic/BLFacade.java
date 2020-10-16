@@ -17,7 +17,7 @@ import exceptions.QuestionAlreadyExist;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-
+//proba aldaketa
 /**
  * Interface that specifies the business logic.
  */
