@@ -21,6 +21,8 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class ApustuaEzabatuGUI extends JFrame {
+	private static final String LOCALE = "Locale: ";
+
 	private static final long serialVersionUID = 1L;
 
 	private JPanel panel;
@@ -711,7 +713,7 @@ public class ApustuaEzabatuGUI extends JFrame {
 			rdbtnNewRadioButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Locale.setDefault(new Locale("en"));
-					System.out.println("Locale: "+Locale.getDefault());
+					System.out.println(LOCALE+Locale.getDefault());
 					redibujar();    }
 			});
 			buttonGroup.add(rdbtnNewRadioButton);
@@ -724,7 +726,7 @@ public class ApustuaEzabatuGUI extends JFrame {
 			rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					Locale.setDefault(new Locale("eus"));
-					System.out.println("Locale: "+Locale.getDefault());
+					System.out.println(LOCALE+Locale.getDefault());
 					redibujar();    }
 			});
 			buttonGroup.add(rdbtnNewRadioButton_1);
@@ -737,7 +739,7 @@ public class ApustuaEzabatuGUI extends JFrame {
 			rdbtnNewRadioButton_2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Locale.setDefault(new Locale("es"));
-					System.out.println("Locale: "+Locale.getDefault());
+					System.out.println(LOCALE+Locale.getDefault());
 					redibujar();
 				}
 			});
