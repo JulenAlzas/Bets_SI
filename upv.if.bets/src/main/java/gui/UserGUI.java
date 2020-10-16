@@ -111,7 +111,8 @@ public class UserGUI extends JFrame {
 		// this.setSize(271, 295);
 		this.setSize(543, 335);
 		this.setContentPane(getJContentPane(qry));
-		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
+		String MainTitle = "MainTitle";
+		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString(MainTitle));
 		getEuro();
 	}
 
