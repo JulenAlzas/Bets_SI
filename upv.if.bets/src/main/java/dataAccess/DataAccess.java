@@ -39,36 +39,48 @@ import gui.MainGUI;
  * It implements the data access to the objectDb database
  */
 public class DataAccess  {
-	private static final String QUIÉN_GANARÁ_EL_PARTIDO = "¿Quién ganará el partido?";
 	protected static EntityManager  db;
 	protected static EntityManagerFactory emf;
 
 
-	ConfigXML c;
+	public static EntityManager getDb() {
+		return db;
+	}
+	ConfigXML c=ConfigXML.getInstance();
 
 	public DataAccess(boolean initializeMode)  {
-
-		c=ConfigXML.getInstance();
-
+		
 		System.out.println("Creating DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
 
-		String fileName=c.getDbFilename();
-		if (initializeMode)
-			fileName=fileName+";drop";
+		open(initializeMode);
+			
+	}
+	
+	
+	
+public void open(boolean initializeMode){
+		
+		System.out.println("Opening DataAccess instance => isDatabaseLocal: "+c.isDatabaseLocal()+" getDatabBaseOpenMode: "+c.getDataBaseOpenMode());
 
+		String fileName=c.getDbFilename();
+		if (initializeMode) {
+			fileName=fileName+";drop";
+			System.out.println("Deleting the DataBase");
+		}
+		
 		if (c.isDatabaseLocal()) {
-			emf = Persistence.createEntityManagerFactory("objectdb:"+fileName);
-			db = emf.createEntityManager();
+			  emf = Persistence.createEntityManagerFactory("objectdb:"+fileName);
+			  db = emf.createEntityManager();
 		} else {
 			Map<String, String> properties = new HashMap<String, String>();
-			properties.put("javax.persistence.jdbc.user", c.getUser());
-			properties.put("javax.persistence.jdbc.password", c.getPassword());
+			  properties.put("javax.persistence.jdbc.user", c.getUser());
+			  properties.put("javax.persistence.jdbc.password", c.getPassword());
 
-			emf = Persistence.createEntityManagerFactory("objectdb://"+c.getDatabaseNode()+":"+c.getDatabasePort()+"/"+fileName, properties);
+			  emf = Persistence.createEntityManagerFactory("objectdb://"+c.getDatabaseNode()+":"+c.getDatabasePort()+"/"+fileName, properties);
 
-			db = emf.createEntityManager();
-		}
-	}
+			  db = emf.createEntityManager();
+    	   }
+}
 
 	public DataAccess()  {	
 		new DataAccess(false);
@@ -129,11 +141,12 @@ public class DataAccess  {
 
 
 			if (Locale.getDefault().equals(new Locale("es"))) {
-				q1=ev1.addQuestion(QUIÉN_GANARÁ_EL_PARTIDO,1);
+				String quienGanaraElPartido= "¿Quién ganará el partido?";
+				q1=ev1.addQuestion(quienGanaraElPartido,1);
 				q2=ev1.addQuestion("¿Quién meterá el primer gol?",2);
-				q3=ev11.addQuestion(QUIÉN_GANARÁ_EL_PARTIDO,1);
+				q3=ev11.addQuestion(quienGanaraElPartido,1);
 				q4=ev11.addQuestion("¿Cuántos goles se marcarán?",2);
-				q5=ev17.addQuestion(QUIÉN_GANARÁ_EL_PARTIDO,1);
+				q5=ev17.addQuestion(quienGanaraElPartido,1);
 				q6=ev17.addQuestion("¿Habrá goles en la primera parte?",2);
 			}
 			else if (Locale.getDefault().equals(new Locale("en"))) {
@@ -307,8 +320,7 @@ public class DataAccess  {
 	public Admins getadmin(String korreoa) {
 		Query query = db.createQuery("SELECT a FROM Admins a WHERE Korreoa= ?1",Admins.class);
 		query.setParameter(1, korreoa);
-		Admins admina= (Admins) query.getSingleResult();
-		return admina;
+		return (Admins) query.getSingleResult();
 
 	}
 
@@ -406,7 +418,7 @@ public class DataAccess  {
 		res= q1.getKuotalista();
 
 		return res;
-	}
+	} 
 
 
 	public boolean emaitzaAldatu(Integer questionNumber,String result) {
@@ -533,6 +545,15 @@ public class DataAccess  {
 		db.getTransaction().commit();
 
 	}
+	public void galderagorde(Question kuotarik_ezduen_galdera) {
+		db.persist(kuotarik_ezduen_galdera);
+		
+	}
+	
+	public void ekintzaagorde(Event ekintza) {
+		db.persist(ekintza);
+		
+	}
 
 
 	public Bet createBet(double zenbatDiru, Integer kuotaId,Integer originala, String korreoa) {
@@ -632,7 +653,6 @@ public class DataAccess  {
 	}
 
 	public Vector<Kuota> kuotalortu(int galderaID) {
-		// TODO Auto-generated method stub
 		Question q = db.find(Question.class, galderaID);
 		return q.getKuotalista();
 	}
@@ -691,7 +711,7 @@ public class DataAccess  {
 		Query query = db.createQuery("DELETE FROM Kuota k WHERE k.kuotaId=?1");
 		query.setParameter(1, KuotaId);
 		int deteledkuota = query.executeUpdate();
-		System.out.println("Deleted questions " + deteledkuota);
+		System.out.println("Deleted kuota " + deteledkuota);
 		db.getTransaction().commit();
 	}
 
@@ -736,7 +756,6 @@ public class DataAccess  {
 													Double dirua = userbet.getZenbatDiru();
 													System.out.println(dirua);
 													u.setDirua(dirua);
-													System.out.println("pasa da*-***********");
 													dirumugimendua(dirua, u.getKorreoa(),1);
 													deleteBet(userbet.getBetId());
 												}
@@ -803,6 +822,63 @@ public class DataAccess  {
 		u.setIrabaziak(profit);
 		db.getTransaction().commit();
 	}
+
+
+	public Event ekintzasortu() {
+		Calendar today = Calendar.getInstance();
+		int month=today.get(Calendar.MONTH);
+		month+=1;
+		int year=today.get(Calendar.YEAR);
+		if (month==12) { month=0; year+=1;}
+		
+		db.getTransaction().begin();
+		Event ekintza= new Event(4444, "Test1-Test2", UtilDate.newDate(year,month,17));
+		db.getTransaction().commit();
+		ekintzaagorde(ekintza);
+		return ekintza;
+	}
+	public Question galderasortu(Event ekintza) {
+
+		db.getTransaction().begin();
+		Question kuota_duen_galdera= ekintza.addQuestion("Honek ez du Kuotarik?", 10);
+//		kuotarik_ezduen_galdera.setresult("Kuotaren emaitza ezberdina");
+		db.getTransaction().commit();
+		kuotaezarri(kuota_duen_galdera.getQuestionNumber(), "Galderaren emaitza ezberdina", 1.2);
+		
+		galderagorde(kuota_duen_galdera);
+		return kuota_duen_galdera;
+		
+	}
+	public Question galderasortu_kuotagabe(Event ekintza) {
+
+		db.getTransaction().begin();
+		Question kuotarik_ezduen_galdera= ekintza.addQuestion("Honek ez du Kuotarik?", 10);
+		db.getTransaction().commit();
+		
+		galderagorde(kuotarik_ezduen_galdera);
+		return kuotarik_ezduen_galdera;
+		
+	}
+	public Question galderasortu_kuotaETAemaitzaBERA(Event ekintza) {
+
+		db.getTransaction().begin();
+		Question kuota_duen_galdera= ekintza.addQuestion("Honek ez du Kuotarik?", 10);
+//		kuotarik_ezduen_galdera.setresult("Emaitza bera");
+		db.getTransaction().commit();
+		kuotaezarri(kuota_duen_galdera.getQuestionNumber(), "Emaitza bera", 1.2);
+		
+		galderagorde(kuota_duen_galdera);
+		return kuota_duen_galdera;
+		
+	}
+
+
+
+	
+
+
+
+
 
 
 }
