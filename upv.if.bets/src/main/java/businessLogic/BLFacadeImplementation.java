@@ -31,7 +31,18 @@ import gui.UserGUI;
  */
 @WebService(endpointInterface = "businessLogic.BLFacade")
 public class BLFacadeImplementation  implements BLFacade {
+	DataAccess dbManager;
 
+	public BLFacadeImplementation(DataAccess da) {
+		System.out.println("Creating BLFacadeImplementation instance with DataAccess parameter");
+		ConfigXML c=ConfigXML.getInstance();
+		if (c.getDataBaseOpenMode().equals("initialize")) {
+			da.open(true);
+			da.initializeDB();
+			da.close();
+		}
+		dbManager=da;
+	}
 
 	public BLFacadeImplementation()  {		
 		System.out.println("Creating BLFacadeImplementation instance");
@@ -60,8 +71,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	@WebMethod
 	public Question createQuestion(Event event, String question, float betMinimum) throws EventFinished, QuestionAlreadyExist{
 
-		//The minimum bed must be greater than 0
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 		Question qry=null;
 
 
@@ -69,9 +79,9 @@ public class BLFacadeImplementation  implements BLFacade {
 			throw new EventFinished(ResourceBundle.getBundle("Etiquetas").getString("ErrorEventHasFinished"));
 
 
-		qry=dBManager.createQuestion(event,question,betMinimum);		
+		qry=dbManager.createQuestion(event,question,betMinimum);		
 
-		dBManager.close();
+		dbManager.close();
 
 		return qry;
 	};
@@ -84,7 +94,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */
 	@WebMethod	
 	public Vector<Event> getEvents(Date date)  {
-		DataAccess dbManager=new DataAccess();
+		dbManager.open(false);
 		Vector<Event>  events=dbManager.getEvents(date);
 		dbManager.close();
 		return events;
@@ -92,7 +102,7 @@ public class BLFacadeImplementation  implements BLFacade {
 
 	@WebMethod
 	public Vector<Kuota> getKuotak(Integer questionN){
-		DataAccess dbManager=new DataAccess();
+		dbManager.open(false);
 		Vector<Kuota>  kuotak=dbManager.getKuotak(questionN);
 		dbManager.close();
 		return kuotak;
@@ -105,7 +115,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	 * @return collection of dates
 	 */
 	@WebMethod public Vector<Date> getEventsMonth(Date date) {
-		DataAccess dbManager=new DataAccess();
+		dbManager.open(false);
 		Vector<Date>  dates=dbManager.getEventsMonth(date);
 		dbManager.close();
 		return dates;
@@ -120,49 +130,49 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */	
 	@WebMethod	
 	public void initializeBD(){
-		DataAccess dBManager=new DataAccess();
-		dBManager.initializeDB();
-		dBManager.close();
+		dbManager.open(false);
+		dbManager.initializeDB();
+		dbManager.close();
 	}
 
 	@WebMethod
 	public User createUser(String izena, String abizena, String korreoa, String pasahitza, String pasahitzaBerretsi,
 			Integer telefonoa, Integer adina) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 		User qry=null;
 
-		qry=dBManager.createUser(izena, abizena, korreoa,pasahitza,pasahitzaBerretsi,telefonoa,adina);		
+		qry=dbManager.createUser(izena, abizena, korreoa,pasahitza,pasahitzaBerretsi,telefonoa,adina);		
 
-		dBManager.close();
+		dbManager.close();
 
 		return qry;
 	}
 	@WebMethod
 	public Admins createAdmin(String izena, String abizena, String korreoa, String pasahitza, String pasahitzaBerretsi,Integer telefonoa, Integer adina){
-		DataAccess dBManager=new DataAccess();
-		Admins qry=null;
+		dbManager.open(false);
+		Admins qry=null; 
 
-		qry=dBManager.createAdmin(izena, abizena, korreoa,pasahitza,pasahitzaBerretsi,telefonoa,adina);		
+		qry=dbManager.createAdmin(izena, abizena, korreoa,pasahitza,pasahitzaBerretsi,telefonoa,adina);		
 
-		dBManager.close();
+		dbManager.close();
 
 		return qry;
 	}
 
 	@WebMethod
 	public void register(String izena, String abizena, String korreoa, String pasahitza1, String pasahitza2, int telefonoa, int adina) {
-		DataAccess d1 = new DataAccess();
-
-		d1.createUser(izena, abizena, korreoa, pasahitza1, pasahitza2, telefonoa, adina);
+		dbManager.open(false);
+		
+		dbManager.createUser(izena, abizena, korreoa, pasahitza1, pasahitza2, telefonoa, adina);
 
 	}
 
 	@WebMethod
 	public void login(String korreoa, String pasahitza) throws Exception {
-		DataAccess d1 = new DataAccess();
-		boolean adminada=d1.adminetandago(korreoa);
+		dbManager.open(false);
+		boolean adminada=dbManager.adminetandago(korreoa);
 		if (!adminada) {
-			User qry=d1.getUser(korreoa);
+			User qry=dbManager.getUser(korreoa);
 			if(qry==null) {
 				throw new Exception();
 			}
@@ -173,14 +183,14 @@ public class BLFacadeImplementation  implements BLFacade {
 				System.out.println("Pasahitz okerra");
 			}
 		}else {
-			Admins qry=d1.getadmin(korreoa);
+			Admins qry=dbManager.getadmin(korreoa);
 			if(qry.getPasahitza().equals(pasahitza)) {
 				JFrame main = new MainGUI();
 				main.setVisible(true);
 			}else {
 				System.out.println("Pasahitz okerra");
 			}
-			d1.close();
+			dbManager.close();
 		}
 
 
@@ -188,263 +198,262 @@ public class BLFacadeImplementation  implements BLFacade {
 	@WebMethod
 	public Event createEvent(String description,Date eventDate) {
 
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 		Event qry=null;
 
-		qry=dBManager.createEvent(description,eventDate);		
+		qry=dbManager.createEvent(description,eventDate);		
 
-		dBManager.close();
+		dbManager.close();
 
 		return qry;
 	};
 
 	@WebMethod
 	public Kuota createKuota(String erantzun, double zenbatekoa,int questionNumber) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 		Kuota qry=null;
 
-		qry=dBManager.createKuota(erantzun, zenbatekoa,questionNumber);  
+		qry=dbManager.createKuota(erantzun, zenbatekoa,questionNumber);  
 
-		dBManager.close();
+		dbManager.close();
 		return qry;
 
 	}
 	@WebMethod
 	public boolean emaitzaAldatu(Integer questionNumber,String result) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		return dBManager.emaitzaAldatu(questionNumber,result);  
+		return dbManager.emaitzaAldatu(questionNumber,result);  
 
 	}
 	@WebMethod
 	public void kuotaezarri(Integer questionNumber,String erantzuna, double zenbatekoKuota) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.kuotaezarri(questionNumber,erantzuna, zenbatekoKuota);  
+		dbManager.kuotaezarri(questionNumber,erantzuna, zenbatekoKuota);  
 
-		dBManager.close();
+		dbManager.close();
 	}
 
 
 	@WebMethod
 	public Bet createBet(double zenbatDiru, Integer kuotaId,Integer originala,String korreoa) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 		Bet qry=null;
 
-		qry=dBManager.createBet(zenbatDiru,kuotaId,originala,korreoa);  
+		qry=dbManager.createBet(zenbatDiru,kuotaId,originala,korreoa);  
 
-		dBManager.close();
+		dbManager.close();
 		return qry;
 	}
 
 
 	@WebMethod
 	public Double diruasartu(String text, Double zenbatdiru) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		Double erab_dirua= dBManager.diruasartu(text,zenbatdiru);  
+		Double erab_dirua= dbManager.diruasartu(text,zenbatdiru);  
 
-		dBManager.close();
+		dbManager.close();
 
 		return erab_dirua;
 	}
 
 	@WebMethod
 	public void dirumugimendua(Double zenbatdiru, String erab, Integer mugimenduMota) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.dirumugimendua(zenbatdiru,erab, mugimenduMota);  
+		dbManager.dirumugimendua(zenbatdiru,erab, mugimenduMota);  
 
-		dBManager.close();
+		dbManager.close();
 
 	}
 
 	@WebMethod
 	public User getUser(String korreoa) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		User user=dBManager.getUser(korreoa);  
+		User user=dbManager.getUser(korreoa);  
 
-		dBManager.close();
+		dbManager.close();
 		return user;
 	}
 
 	@WebMethod
 	public void apustutakoakendu(String email, Double zenbat) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.apustutakoakendu(email,zenbat);  
+		dbManager.apustutakoakendu(email,zenbat);  
 
-		dBManager.close();
+		dbManager.close();
 
 	}
 
 	@WebMethod
 	public void removeBet(Integer kuotaId, String korreoa, Bet b) {
-		DataAccess dBManager=new DataAccess();
-		dBManager.deleteBet(b.getBetId());
-		dBManager.deleteBetFromUser(b,korreoa);
-		dBManager.deleteBetFromKuota(b,kuotaId);
-		dBManager.close();
+		dbManager.open(false);
+		dbManager.deleteBet(b.getBetId());
+		dbManager.deleteBetFromUser(b,korreoa);
+		dbManager.deleteBetFromKuota(b,kuotaId);
+		dbManager.close();
 	}
 	@WebMethod
 	public Double etekinakLortu() {
-		DataAccess dBManager=new DataAccess();
-		Double etekina= dBManager.etekinakLortu();
-		dBManager.close();
+		dbManager.open(false);
+		Double etekina= dbManager.etekinakLortu();
+		dbManager.close();
 		return etekina;
 	}
 	@WebMethod
 	public Vector<Kuota> kuotalortu(int GalderaID) {
-		DataAccess dBManager=new DataAccess();
-		Vector<Kuota> k= dBManager.kuotalortu(GalderaID);
-		dBManager.close();
+		dbManager.open(false);
+		Vector<Kuota> k= dbManager.kuotalortu(GalderaID);
+		dbManager.close();
 		return k;
 	}
 
 	@WebMethod
 	public void addErreplikatua(String zein, String zeini) {
-		DataAccess dBManager=new DataAccess();
-		dBManager.addErreplikatua(zein,zeini);
-		dBManager.close();
+		dbManager.open(false);
+		dbManager.addErreplikatua(zein,zeini);
+		dbManager.close();
 
 	}
 
 	@WebMethod
 	public void idListaGehitu(Bet apustu, Vector<Integer> lista) {
-		DataAccess dBManager=new DataAccess();
-		dBManager.idListaGehitu(apustu, lista);
-		dBManager.close();
+		dbManager.open(false);
+		dbManager.idListaGehitu(apustu, lista);
+		dbManager.close();
 
 	}
 
 	@WebMethod
 	public void addBetUser(User erab, Bet b) {
-		DataAccess dBManager=new DataAccess();
-		dBManager.addBetUser(erab, b);
-		dBManager.close();
+		dbManager.open(false);
+		dbManager.addBetUser(erab, b);
+		dbManager.close();
 	}
 
 	@WebMethod
 	public Bet getBet(Integer id) {
-		DataAccess dBManager=new DataAccess();
-		Bet b=dBManager.getBet(id);
-		dBManager.close();
+		dbManager.open(false);
+		Bet b=dbManager.getBet(id);
+		dbManager.close();
 		return b;
 	}
 
 	@WebMethod
 	public Vector<User> getErabiltzaileak() {
-		DataAccess dBManager=new DataAccess();
-		Vector<User> b=dBManager.getErabiltzaileak();
-		dBManager.close();
+		dbManager.open(false);
+		Vector<User> b=dbManager.getErabiltzaileak();
+		dbManager.close();
 		return b;
 	}
 
 	@WebMethod
 	public Double diruaLortu(String korreoa) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		Double erab_dirua= dBManager.diruaLortu(korreoa);  
+		Double erab_dirua= dbManager.diruaLortu(korreoa);  
 
-		dBManager.close();
+		dbManager.close();
 
 		return erab_dirua;
 	}
 
 	@WebMethod
 	public void erreplikatutikKendu(String i, String j) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.erreplikatutikKendu(i,j);  
+		dbManager.erreplikatutikKendu(i,j);  
 
-		dBManager.close();
+		dbManager.close();
 
 	}
 	@WebMethod
 	public void deleteQuestion( Integer questionNumber) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.deleteQuestion(questionNumber); 
+		dbManager.deleteQuestion(questionNumber); 
 
-		dBManager.close();
+		dbManager.close();
 
 	}
 	@WebMethod
 	public void deleteKuota( Integer KuotaId) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.deleteKuota(KuotaId); 
+		dbManager.deleteKuota(KuotaId); 
 
-		dBManager.close();
+		dbManager.close();
 	}
 	@WebMethod
 	public void deleteEvent( Integer eventNumber) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.deleteEvent(eventNumber); 
+		dbManager.deleteEvent(eventNumber); 
 
-		dBManager.close();
+		dbManager.close();
 	}
 	@WebMethod
 	public Event getEvent(Integer eventNumber) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		Event e=dBManager.getEvent(eventNumber); 
+		Event e=dbManager.getEvent(eventNumber); 
 
-		dBManager.close();
+		dbManager.close();
 		return e;
 	}
 	@WebMethod
 	public List<User> getUserList(){
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		List<User> lista=dBManager.getUserList(); 
+		List<User> lista=dbManager.getUserList(); 
 
-		dBManager.close();
+		dbManager.close();
 		return lista;
 	}
 	@WebMethod
 	public void ekintzaezabatu(Integer eventnumber) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.ekintzaezabatu(eventnumber); 
+		dbManager.ekintzaezabatu(eventnumber); 
 
-		dBManager.close();
+		dbManager.close();
 	}
 	@WebMethod
 	public Kuota getKuota(Integer id) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		Kuota k = dBManager.getKuota(id);  
+		Kuota k = dbManager.getKuota(id);  
 
-		dBManager.close();
+		dbManager.close();
 		return k;
 	}
 
 	@WebMethod
 	public void apustuDiruaAldatu(Integer id, Double dirua) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
 
-		dBManager.apustuDiruaAldatu(id,dirua);  
+		dbManager.apustuDiruaAldatu(id,dirua);  
 
-		dBManager.close();
+		dbManager.close();
 
 	}
 
 	@WebMethod
 	public void apustuaOrdaindu(Integer questionNumber) {
-		DataAccess dBManager=new DataAccess();
+		dbManager.open(false);
+		dbManager.apustuaOrdaindu(questionNumber);
 
-		dBManager.apustuaOrdaindu(questionNumber);
-
-		dBManager.close();
+		dbManager.close();
 	}
 	@WebMethod
 	public List<User> topErabiltzaileak() {
-		DataAccess dBManager=new DataAccess();
-		List<User> topUsers= dBManager.topErabiltzaileak();
-		dBManager.close();
+		dbManager.open(false);
+		List<User> topUsers= dbManager.topErabiltzaileak();
+		dbManager.close();
 		return topUsers;
 	}
 
