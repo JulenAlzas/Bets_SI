@@ -24,6 +24,7 @@ import java.awt.event.ActionEvent;
 
 public class DiruaSartuGUI extends JFrame {
 
+	private static final String TAHOMA = "Tahoma";
 	private JPanel contentPane;
 	private JTextField zenbatdiru;
 	private JButton jButtonClose = new JButton(ResourceBundle.getBundle("Etiquetas").getString("Close"));
@@ -68,7 +69,7 @@ public class DiruaSartuGUI extends JFrame {
 		contentPane.setLayout(null);
 
 		
-		lblDiruaSartu.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblDiruaSartu.setFont(new Font(TAHOMA, Font.BOLD, 14));
 		lblDiruaSartu.setBounds(34, 0, 248, 39);
 		contentPane.add(lblDiruaSartu);
 		contentPane.add(getPanel());
@@ -94,17 +95,17 @@ public class DiruaSartuGUI extends JFrame {
 		panel.setBounds(282, 0, 154, 23);
 		contentPane.add(panel);
 
-		label.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		label.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		panel.add(label);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(282, 21, 154, 23);
 		contentPane.add(panel_1);
 
-		label_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		label_1.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		panel_1.add(label_1);
 
-		label_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		label_2.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		panel_1.add(label_2);
 
 		jButtonClose.setBounds(253, 94, 109, 22);
@@ -127,7 +128,7 @@ public class DiruaSartuGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		lblDiruaSartu.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblDiruaSartu.setFont(new Font(TAHOMA, Font.BOLD, 14));
 		lblDiruaSartu.setBounds(34, 0, 248, 39);
 		contentPane.add(lblDiruaSartu);
 		contentPane.add(getPanel());
@@ -140,17 +141,17 @@ public class DiruaSartuGUI extends JFrame {
 		contentPane.add(zenbatdiru);
 		zenbatdiru.setColumns(10);
 
-		label.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		label.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		panel.add(label);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(282, 21, 154, 23);
 		contentPane.add(panel_1);
 
-		label_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		label_1.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		panel_1.add(label_1);
 
-		label_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		label_2.setFont(new Font(TAHOMA, Font.PLAIN, 12));
 		panel_1.add(label_2);
 
 		label.setText(text);
